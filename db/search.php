@@ -1,12 +1,27 @@
-<?php 
+<?php
 require 'conn.php';
 
 if (isset($_POST['data'])) {
     try {
-        // Prepare the query with placeholders to prevent SQL injection
-        $stmt = $conn->prepare("SELECT societe,CASE WHEN apply_at is null  THEN '--' ELSE apply_at END as apply_at
-        ,CASE WHEN nb is null  THEN '--' ELSE nb END as  note,color  FROM societes WHERE societe LIKE ?");
-        $searchTerm = "%" . $_POST['data'] . "%";
+        // Sanitize and trim input data
+        $data = trim($_POST['data'] ?? '');
+        $searchTerm = "%" . $data . "%";
+
+        // Construct the base query
+        $query = "SELECT societe, 
+                  CASE WHEN apply_at IS NULL THEN '--' ELSE apply_at END AS apply_at, 
+                  CASE WHEN nb IS NULL THEN '--' ELSE nb END AS note, 
+                  color 
+                  FROM societes 
+                  WHERE societe LIKE ?";
+
+        // Add LIMIT condition if no data is provided
+        if ($data === '') {
+            $query .= " LIMIT 4";
+        }
+
+        // Prepare and execute the statement
+        $stmt = $conn->prepare($query);
         $stmt->execute([$searchTerm]);
 
         // Fetch all matching rows
