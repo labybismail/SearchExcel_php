@@ -1,0 +1,13 @@
+{
+    "name": "vendor/phpexceltst",
+    "description": "project is a test to learn how to read from excel file",
+    "authors": [
+        {
+            "name": "ismail labyb"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.3"
+    }
+}
