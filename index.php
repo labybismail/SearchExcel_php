@@ -10,7 +10,7 @@
 </head>
 
 <body
-    style="width:100%;height:100vh; background-image: url('images/Searchs_005.JPG');background-repeat:no-repeat;background-size:cover;">
+    style="width:100%;height:100vh; background-image: url('images/Searchs_005.jpg');background-repeat:no-repeat;background-size:cover;">
     <div class="container-fluid" style="width:100%;height:100%;background-color:rgba(0, 0, 0, 0.68);">
         <div class="row">
             <div class="col-12 mt-5">
