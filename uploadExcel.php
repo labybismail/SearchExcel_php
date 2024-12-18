@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<?php require 'parts/navbar.php';?>
 
     <form action="op/maj.php" method="POST" enctype="multipart/form-data">
         <div class="file-upload">

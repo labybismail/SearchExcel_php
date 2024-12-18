@@ -7,10 +7,22 @@
     <title>Dynamic Input and Table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body
     style="width:100%;height:100vh; background-image: url('images/Searchs_005.jpg');background-repeat:no-repeat;background-size:cover;">
+
+    <!-- nav -->
+    <?php require 'parts/navbar.php';?>
+   
+
+
+
+    <!-- end nav -->
     <div class="container-fluid" style="width:100%;height:100%;background-color:rgba(0, 0, 0, 0.68);">
         <div class="row">
             <div class="col-12 mt-5">
@@ -27,14 +39,14 @@
 
                 </div>
             </div>
-            <div class="col-lg-10 offset-lg-1 scrollable" >
+            <div class="col-lg-10 offset-lg-1 scrollable">
                 <style>
                     .scrollable {
                         max-height: 450px;
                         overflow-y: scroll;
                         scrollbar-width: none;
                         /* For Firefox */
-                        border-radius:10px ;
+                        border-radius: 10px;
                     }
 
                     .scrollable::-webkit-scrollbar {
